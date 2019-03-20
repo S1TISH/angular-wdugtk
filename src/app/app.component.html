@@ -1,0 +1,41 @@
+<div>
+  <form class="example" action="/action_page.php">
+  <ul class="filter_sec">
+    <li><input type="text" placeholder="Search.." name="search2"></li>
+    <li>
+      <label>Filter by:</label>
+      <select>
+        <option>Action</option>
+        <option>Action 2</option>
+        <option>Action 3</option>
+      </select>
+    </li>
+    <li>
+      <a href="#">Refresh</a>
+    </li>
+    <li>
+      <button type="button" >Add IZON club golfer</button>
+    </li>
+  </ul>
+</form>
+</div>
+<table id="customers">
+  <tr>
+    <th>GolfeR Name</th>
+    <th>Assigned Status</th>
+    <th>Status</th>
+    <th>Details</th>
+  </tr>
+  <tr *ngFor="let data of golfData">
+    <td class="gol-col">{{data.name}}</td>
+    <td></td>
+    <td class="gol-col">
+      <span class="checkmark">
+        <div class="checkmark_circle"></div>
+        <div class="checkmark_stem"></div>
+        <div class="checkmark_kick"></div>
+      </span>
+    </td>
+    <td (click)="golferDetails()" class="gol-col"><div class="eye"></div></td>
+  </tr>
+</table>
